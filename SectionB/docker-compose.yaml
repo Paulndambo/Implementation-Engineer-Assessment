@@ -9,8 +9,6 @@ services:
       - POSTGRES_PASSWORD=1234
       - POSTGRES_USER=postgres
       - POSTGRES_DB=sectionb
-    volumes:
-      - postgresql-data:/var/lib/postgresql/data
 
   backend_service:
     build: .
@@ -28,6 +26,3 @@ services:
     depends_on:
       - db_service
  
-
-volumes:
-  postgres_data:
