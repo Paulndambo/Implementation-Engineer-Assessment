@@ -8,6 +8,7 @@ ENV POSTGRES_USER=postgres
 ENV POSTGRES_DB=sectionb
 ENV DB_HOST=db_service
 
+
 COPY . /app/
 
 
