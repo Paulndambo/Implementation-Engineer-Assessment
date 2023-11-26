@@ -14,7 +14,7 @@ services:
 
   backend_service:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: gunicorn SectionB.wsgi:application -w 4 -b 0.0.0.0:8000
     volumes:
       - ./:app
     ports:
