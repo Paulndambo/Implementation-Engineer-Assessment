@@ -1,8 +1,8 @@
-from searchapp.cities_data import load_cities_data
+from django.core.paginator import Paginator
 from django.db.models import Q
 from django.shortcuts import render
-from django.core.paginator import Paginator
 
+from searchapp.cities_data import load_cities_data
 from searchapp.models import City
 
 
