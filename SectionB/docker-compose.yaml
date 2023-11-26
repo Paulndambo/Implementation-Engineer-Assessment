@@ -4,7 +4,8 @@ services:
     image: postgres
     restart: always
     ports:
-      - "5432:5432"
+      - "5433:5432"
+
     environment:
       - POSTGRES_PASSWORD=1234
       - POSTGRES_USER=postgres
@@ -13,7 +14,7 @@ services:
 
   backend_service:
     build: .
-    command: gunicorn SectionB.wsgi:application -w 4 -b 0.0.0.0:8000
+    command: gunicorn SectionB.wsgi:application -w 2 -b 0.0.0.0:8000
     ports:
       - "8000:8000"
 
